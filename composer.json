@@ -1,0 +1,26 @@
+{
+    "name": "imoisey/cross",
+    "description": "Библиотека для поиска временных пересечений.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Moiseev",
+            "email": "i.i.moiseev@efko.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Imoisey\\Cross\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Imoisey\\Cross\\Tests\\": "tests"
+        }
+    }
+}

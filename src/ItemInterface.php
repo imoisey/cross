@@ -2,7 +2,7 @@
 
 namespace Imoisey\Cross;
 
-interface Item
+interface ItemInterface
 {
     /**
      * Возвращет проверяемый период

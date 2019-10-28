@@ -1,10 +1,10 @@
 <?php
 
-namespace Imoisey\Cross;
+namespace Imoisey\Cross\Collection;
 
 use Imoisey\Cross\ItemInterface;
 
-interface Collection
+interface CollectionInterface
 {
     /**
      * Выполняет проверку пересечений в коллекции.

@@ -2,6 +2,8 @@
 
 namespace Imoisey\Cross;
 
+use Imoisey\Cross\Collection\CollectionInterface;
+
 interface ProviderInterface
 {
     /**

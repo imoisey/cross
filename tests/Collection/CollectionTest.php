@@ -2,8 +2,8 @@
 
 namespace Imoisey\Cross\Tests\Collection;
 
-use Imoisey\Cross\Tests\BaseTestCase;
 use Imoisey\Cross\Tests\BaseCollection;
+use Imoisey\Cross\Tests\BaseTestCase;
 
 class CollectionTest extends BaseTestCase
 {
@@ -16,10 +16,10 @@ class CollectionTest extends BaseTestCase
 
     public function testAddToCollection()
     {
-        $item = $this->getItem("10:00", "11:30");
+        $item = $this->getItem('10:00', '11:30');
 
         $this->collection->add($item);
-        $this->assertContains($item, $this->collection->all(), "ItemInterface не был добавлен.");
+        $this->assertContains($item, $this->collection->all(), 'ItemInterface не был добавлен.');
     }
 
     /**
@@ -36,8 +36,8 @@ class CollectionTest extends BaseTestCase
     public function testAddAllToCollection()
     {
         $items = [
-            $this->getItem("10:00", "11:30"),
-            $this->getItem("12:00", "13:30"),
+            $this->getItem('10:00', '11:30'),
+            $this->getItem('12:00', '13:30'),
         ];
 
         $this->collection = new BaseCollection();
@@ -48,9 +48,9 @@ class CollectionTest extends BaseTestCase
     public function testVerifyIsCollisionExist()
     {
         $items = [
-            $this->getItem("10:30", "11:00"),
-            $this->getItem("11:00", "12:00"),
-            $this->getItem("11:20", "12:00")
+            $this->getItem('10:30', '11:00'),
+            $this->getItem('11:00', '12:00'),
+            $this->getItem('11:20', '12:00'),
         ];
 
         $this->collection->addAll($items);
@@ -61,9 +61,9 @@ class CollectionTest extends BaseTestCase
     public function testVerify()
     {
         $items = [
-            $this->getItem("10:30", "11:00"),
-            $this->getItem("11:00", "12:00"),
-            $this->getItem("13:20", "14:00")
+            $this->getItem('10:30', '11:00'),
+            $this->getItem('11:00', '12:00'),
+            $this->getItem('13:20', '14:00'),
         ];
 
         $this->collection->addAll($items);

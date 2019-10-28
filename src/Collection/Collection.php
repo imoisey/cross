@@ -12,7 +12,7 @@ abstract class Collection extends Sequence implements CollectionInterface
 
     public function __construct(array $items = [])
     {
-        $this->addAll($items);
+    $this->addAll($items);
     }
 
     /**

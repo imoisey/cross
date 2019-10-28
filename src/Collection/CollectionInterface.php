@@ -14,7 +14,7 @@ interface CollectionInterface
     public function verify();
 
     /**
-     * Возвращает элементы, которые находятся в пересечении
+     * Возвращает элементы, которые находятся в пересечении.
      *
      * @return ItemInterface[]
      */

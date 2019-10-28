@@ -4,5 +4,4 @@ namespace Imoisey\Cross;
 
 class Manager
 {
-    
 }

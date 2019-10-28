@@ -2,8 +2,8 @@
 
 namespace Imoisey\Cross\Collection;
 
-use PhpCollection\Sequence;
 use Imoisey\Cross\ItemInterface;
+use PhpCollection\Sequence;
 
 abstract class Collection extends Sequence implements CollectionInterface
 {
@@ -12,31 +12,36 @@ abstract class Collection extends Sequence implements CollectionInterface
 
     public function __construct(array $items = [])
     {
-    $this->addAll($items);
+        $this->addAll($items);
     }
 
     /**
-     * Добавляет элемент в коллекцию
+     * Добавляет элемент в коллекцию.
      *
      * @param ItemIterface $item
+     *
      * @throws \InvalidArgumentException
+     *
      * @return void
      */
     public function add($item)
     {
         if ($item instanceof ItemInterface) {
             parent::add($item);
+
             return;
         }
 
-        throw new \InvalidArgumentException("Item does not implement the interface ItemInterface");
+        throw new \InvalidArgumentException('Item does not implement the interface ItemInterface');
     }
 
     /**
-     * Добавляет массив элеменов в коллекцию
+     * Добавляет массив элеменов в коллекцию.
      *
      * @param ItemIterface[] $items
+     *
      * @throws \InvalidArgumentException
+     *
      * @return void
      */
     public function addAll(array $items)

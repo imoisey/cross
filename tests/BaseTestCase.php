@@ -3,7 +3,6 @@
 namespace Imoisey\Cross\Tests;
 
 use Imoisey\Cross\Collection\Collection;
-use Imoisey\Cross\ItemInterface;
 use PHPUnit\Framework\TestCase;
 
 class BaseTestCase extends TestCase
@@ -23,13 +22,12 @@ class BaseTestCase extends TestCase
 
     protected function getDatePeriod($begin, $end)
     {
-        $beginObj = \DateTime::createFromFormat("H:i", $begin);
-        $endObj = \DateTime::createFromFormat("H:i", $end);
+        $beginObj = \DateTime::createFromFormat('H:i', $begin);
+        $endObj = \DateTime::createFromFormat('H:i', $end);
 
-        return new \DatePeriod($beginObj, new \DateInterval("PT5M"), $endObj);
+        return new \DatePeriod($beginObj, new \DateInterval('PT5M'), $endObj);
     }
 }
-
 
 class BaseCollection extends Collection
 {

@@ -1,0 +1,8 @@
+preset: recommended
+
+risky: false
+
+finder:
+  path:
+    - "src/"
+    - "tests/"

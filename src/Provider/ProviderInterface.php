@@ -1,6 +1,6 @@
 <?php
 
-namespace Imoisey\Cross;
+namespace Imoisey\Cross\Provider;
 
 use Imoisey\Cross\Collection\CollectionInterface;
 
@@ -12,4 +12,11 @@ interface ProviderInterface
      * @return CollectionInterface[]
      */
     public function getCollections();
+
+    /**
+     * Возвращает имя провайдера
+     *
+     * @return string
+     */
+    public function getName();
 }

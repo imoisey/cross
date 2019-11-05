@@ -8,7 +8,6 @@ use PhpCollection\Sequence;
 /**
  * Абстрактная коллекция.
  * Хранит в себе однотипные элементы, которые нужно проверять на пересечения.
- * 
  */
 abstract class Collection extends Sequence implements CollectionInterface
 {
@@ -101,10 +100,11 @@ abstract class Collection extends Sequence implements CollectionInterface
 
     /**
      * Проверяет пересечение 2х периодов
-     * Возвращает true, если они пересекаются
+     * Возвращает true, если они пересекаются.
      *
      * @param \DatePeriod $periodA
      * @param \DatePeriod $periodB
+     *
      * @return bool
      */
     protected function isCrossPeriods(\DatePeriod $periodA, \DatePeriod $periodB)
@@ -120,10 +120,11 @@ abstract class Collection extends Sequence implements CollectionInterface
 
     /**
      * Проверяет пересечение 2х периодов
-     * Возвращает true, если они НЕ пересекаются
+     * Возвращает true, если они НЕ пересекаются.
      *
      * @param \DatePeriod $periodA
      * @param \DatePeriod $periodB
+     *
      * @return bool
      */
     protected function isNotCrossPeriods(\DatePeriod $periodA, \DatePeriod $periodB)

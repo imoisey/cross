@@ -17,7 +17,7 @@ interface ProviderInterface
     public function getCollections();
 
     /**
-     * Возвращает имя провайдера
+     * Возвращает имя провайдера.
      *
      * @return string
      */

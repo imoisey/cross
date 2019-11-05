@@ -2,8 +2,8 @@
 
 namespace Imoisey\Cross\Tests\Fixtures;
 
-use Imoisey\Cross\Tests\BaseTestCase;
 use Imoisey\Cross\Provider\ProviderInterface;
+use Imoisey\Cross\Tests\BaseTestCase;
 
 class BaseWithCrossProvider implements ProviderInterface
 {
@@ -22,9 +22,9 @@ class BaseWithCrossProvider implements ProviderInterface
     public function getCollections()
     {
         $items = [
-            $this->helper->getItem("10:00", "11:30"),
-            $this->helper->getItem("11:10", "13:00"),
-            $this->helper->getItem("12:00", "15:00"),
+            $this->helper->getItem('10:00', '11:30'),
+            $this->helper->getItem('11:10', '13:00'),
+            $this->helper->getItem('12:00', '15:00'),
         ];
 
         return [new BaseCollection($items)];

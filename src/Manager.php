@@ -5,15 +5,14 @@ namespace Imoisey\Cross;
 use Imoisey\Cross\Provider\ProviderInterface;
 
 /**
- * Управляет механизмамом поиска пересечений
- * 
+ * Управляет механизмамом поиска пересечений.
+ *
  * ```php
  * $manager = new Manager(ProviderInterface $provider);
  * if ($manager->verify()) {
  *      $manager->getCollision();
  * }
  * ```
- * 
  */
 class Manager
 {
@@ -35,9 +34,10 @@ class Manager
     }
 
     /**
-     * Добавление дополнительных провайдеров данных
+     * Добавление дополнительных провайдеров данных.
      *
      * @param ProviderInterface $provider
+     *
      * @return void
      */
     public function addProvider(ProviderInterface $provider)
@@ -46,17 +46,17 @@ class Manager
     }
 
     /**
-     * Выполняет проверку пересечений по всем коллекциям добавленных провайдеров
+     * Выполняет проверку пересечений по всем коллекциям добавленных провайдеров.
      *
      * @return bool
      */
     public function verify()
     {
         $this->collision = [];
-        foreach($this->providers as $providerName => $provider) {
+        foreach ($this->providers as $providerName => $provider) {
             $collections = $provider->getCollections();
-            foreach($collections as $collection) {
-                if($collection->verify()) {
+            foreach ($collections as $collection) {
+                if ($collection->verify()) {
                     $this->collision[$providerName][] = $collection;
                 }
             }
@@ -70,11 +70,12 @@ class Manager
      * Поддерживает фильтрацию по провайдеру.
      *
      * @param string $providerName
+     *
      * @return CollectionInterface[]
      */
     public function getCollision($providerName = null)
     {
-        if(isset($this->collision[$providerName])) {
+        if (isset($this->collision[$providerName])) {
             return $this->collision[$providerName];
         }
 

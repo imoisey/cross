@@ -3,7 +3,7 @@
 namespace Imoisey\Cross\Tests\Collection;
 
 use Imoisey\Cross\Tests\BaseTestCase;
-use Imoisey\Cross\Tests\BaseCollection;
+use Imoisey\Cross\Tests\Fixtures\BaseCollection;
 
 class CollectionTest extends BaseTestCase
 {

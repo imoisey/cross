@@ -2,6 +2,11 @@
 
 namespace Imoisey\Cross\Tests;
 
+use Imoisey\Cross\Tests\BaseTestCase;
+use Imoisey\Cross\Tests\Fixtures\BaseManager;
+use Imoisey\Cross\Tests\Fixtures\BaseNoCrossProvider;
+use Imoisey\Cross\Tests\Fixtures\BaseWithCrossProvider;
+
 class ManagerTest extends BaseTestCase
 {
     protected $providerWithCross;

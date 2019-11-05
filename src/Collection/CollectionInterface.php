@@ -4,6 +4,9 @@ namespace Imoisey\Cross\Collection;
 
 use Imoisey\Cross\ItemInterface;
 
+/**
+ * Группирует проверяемые элементы по одному типу.
+ */
 interface CollectionInterface
 {
     /**

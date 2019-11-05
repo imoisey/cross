@@ -5,6 +5,11 @@ namespace Imoisey\Cross\Collection;
 use PhpCollection\Sequence;
 use Imoisey\Cross\ItemInterface;
 
+/**
+ * Абстрактная коллекция.
+ * Хранит в себе однотипные элементы, которые нужно проверять на пересечения.
+ * 
+ */
 abstract class Collection extends Sequence implements CollectionInterface
 {
     /** @var ItemInteface[] */
@@ -46,6 +51,11 @@ abstract class Collection extends Sequence implements CollectionInterface
         }
     }
 
+    /**
+     * Выполняет проверку перечений внутри коллекции.
+     *
+     * @return bool
+     */
     public function verify()
     {
         $this->collision = [];
@@ -57,7 +67,7 @@ abstract class Collection extends Sequence implements CollectionInterface
                 $itemB = $this->get($b);
                 $periodB = $itemB->getPeriod();
 
-                if ($this->notComparePeriods($periodA, $periodB)) {
+                if ($this->isNotCrossPeriods($periodA, $periodB)) {
                     continue;
                 }
 
@@ -74,12 +84,25 @@ abstract class Collection extends Sequence implements CollectionInterface
         return empty($this->collision) ? false : true;
     }
 
+    /**
+     * Возвращает элементы коллекции, которые пересекаются.
+     *
+     * @return ItemInterface[]
+     */
     public function getCollision()
     {
         return $this->collision;
     }
 
-    protected function comparePeriods(\DatePeriod $periodA, \DatePeriod $periodB)
+    /**
+     * Проверяет пересечение 2х периодов
+     * Возвращает true, если они пересекаются
+     *
+     * @param \DatePeriod $periodA
+     * @param \DatePeriod $periodB
+     * @return bool
+     */
+    protected function isCrossPeriods(\DatePeriod $periodA, \DatePeriod $periodB)
     {
         $beginA = $periodA->start->getTimestamp();
         $beginB = $periodB->start->getTimestamp();
@@ -90,8 +113,16 @@ abstract class Collection extends Sequence implements CollectionInterface
         return min($endA, $endB) - max($beginA, $beginB) > 0;
     }
 
-    protected function notComparePeriods(\DatePeriod $periodA, \DatePeriod $periodB)
+    /**
+     * Проверяет пересечение 2х периодов
+     * Возвращает true, если они НЕ пересекаются
+     *
+     * @param \DatePeriod $periodA
+     * @param \DatePeriod $periodB
+     * @return bool
+     */
+    protected function isNotCrossPeriods(\DatePeriod $periodA, \DatePeriod $periodB)
     {
-        return $this->comparePeriods($periodA, $periodB) == false;
+        return $this->isCrossPeriods($periodA, $periodB) == false;
     }
 }

@@ -2,6 +2,9 @@
 
 namespace Imoisey\Cross;
 
+/**
+ * Интерфейс для элементов, которые будут проверяться
+ */
 interface ItemInterface
 {
     /**

@@ -4,6 +4,9 @@ namespace Imoisey\Cross\Provider;
 
 use Imoisey\Cross\Collection\CollectionInterface;
 
+/**
+ * Провайдер данных занимается формированием коллекций, которые будут проверяться.
+ */
 interface ProviderInterface
 {
     /**

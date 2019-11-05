@@ -2,7 +2,6 @@
 
 namespace Imoisey\Cross\Tests;
 
-use Imoisey\Cross\Tests\BaseTestCase;
 use Imoisey\Cross\Tests\Fixtures\BaseManager;
 use Imoisey\Cross\Tests\Fixtures\BaseNoCrossProvider;
 use Imoisey\Cross\Tests\Fixtures\BaseWithCrossProvider;
@@ -33,7 +32,7 @@ class ManagerTest extends BaseTestCase
     {
         $manager->addProvider($this->providerNoCross);
         $this->assertContains($this->providerNoCross, $manager->getProviders());
-    
+
         return $manager;
     }
 
@@ -47,7 +46,6 @@ class ManagerTest extends BaseTestCase
         $this->assertEquals($manager->getCollision(), $manager->getCollision($this->providerNoCross->getName()));
         $this->assertNotEmpty($manager->getCollision($this->providerWithCross->getName()));
     }
-
 
     public function testVerifyNoCross()
     {

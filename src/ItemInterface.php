@@ -8,7 +8,7 @@ namespace Imoisey\Cross;
 interface ItemInterface
 {
     /**
-     * Возвращет проверяемый период
+     * Возвращет проверяемый период.
      *
      * @return \DatePeriod
      */

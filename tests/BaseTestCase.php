@@ -21,9 +21,9 @@ class BaseTestCase extends TestCase
 
     protected function getDatePeriod($begin, $end)
     {
-        $beginObj = \DateTime::createFromFormat("H:i", $begin);
-        $endObj = \DateTime::createFromFormat("H:i", $end);
+        $beginObj = \DateTime::createFromFormat('H:i', $begin);
+        $endObj = \DateTime::createFromFormat('H:i', $end);
 
-        return new \DatePeriod($beginObj, new \DateInterval("PT5M"), $endObj);
+        return new \DatePeriod($beginObj, new \DateInterval('PT5M'), $endObj);
     }
 }

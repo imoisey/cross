@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Imoisey\Cross\Manager</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.html">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.html">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.html">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.html">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.html">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.html">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.html#Imoisey_Cross">Imoisey\Cross</a>
+          </li>
+          <li class="separator">Manager</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#coverage">Coverage</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/Manager.php.html#line16">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Imoisey\Cross\</small>Manager</h1>
+        <h4>Управляет механизмамом поиска пересечений.</h4>
+        <p>$manager = new Manager(ProviderInterface $provider);<br/>if ($manager-&gt;verify()) {<br/>$manager-&gt;getCollision();<br/>}</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Manager
+            {<br/><ul class="none"><li>// members</li><li>protected array <a href="#members">$collision</a> =
+                        ;
+                    </li><li>protected array <a href="#members">$providers</a> =
+                        ;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/__construct.html">__construct</a>()
+                    </li><li>public void <a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/addProvider.html">addProvider</a>()
+                    </li><li>public bool <a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/verify.html">verify</a>()
+                    </li><li>public array <a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/getCollision.html">getCollision</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="coverage">Coverage</h2>
+        <table class="styled">
+          <tr>
+            <td>Methods</td>
+            <td class="percent">0%</td>
+            <td class="nummeric">0 / 4</td>
+          </tr>
+          <tr>
+            <td>Lines</td>
+            <td class="percent">100%</td>
+            <td class="nummeric">17 / 17</td>
+          </tr>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="collision">
+              <strong>$collision</strong>
+              <br/>
+              <span class="indent">@var array</span>
+            </li>
+            <li id="providers">
+              <strong>$providers</strong>
+              <br/>
+              <span class="indent">@var array</span>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="__construct"><a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/__construct.html">__construct()</a>
+                — Инициализация объекта.</li>
+            <li id="addProvider"><a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/addProvider.html">addProvider()</a>
+                — Добавление дополнительных провайдеров данных.</li>
+            <li id="getCollision"><a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/getCollision.html">getCollision()</a>
+                — Возвращает коллекции, которые содержат пересечения.</li>
+            <li id="verify"><a title="Imoisey\Cross\Manager" href="../classes/Imoisey_Cross_Manager/verify.html">verify()</a>
+                — Выполняет проверку пересечений по всем коллекциям добавленных провайдеров.</li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2019-11-05T14:47:52+00:00 (commit #<span title="d8346c7b9348716dd9138042ca3e12ace167fcd6">d8346c7</span>)</h3>
+            <div>
+              <p>
+                        Author: imoisey (developer.modx@gmail.com) /
+                        Commiter: GitHub (developer.modx@gmail.com)
+                    </p>
+              <pre class="wrapped">Apply fixes from StyleCI (#2)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2019-11-05T14:39:24+00:00 (commit #<span title="7ba33e518f6b10ecf3f2161fbe80d6cc233855eb">7ba33e5</span>)</h3>
+            <div>
+              <p>
+                        Author: Igor Moiseev (developer.modx@gmail.com) /
+                        Commiter: Igor Moiseev (developer.modx@gmail.com)
+                    </p>
+              <pre class="wrapped">Add DocsBlock</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2019-10-29T14:49:39+00:00 (commit #<span title="8d1b504a2d86c32cc2913a49b22a90f5f330a818">8d1b504</span>)</h3>
+            <div>
+              <p>
+                        Author: Moiseev I (i.i.moiseev@efko.ru) /
+                        Commiter: Moiseev I (i.i.moiseev@efko.ru)
+                    </p>
+              <pre class="wrapped">Added Manager code</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2019-10-28T14:40:45+00:00 (commit #<span title="43558b030ad28e52e7aebd66796497a9b3131f89">43558b0</span>)</h3>
+            <div>
+              <p>
+                        Author: imoisey (developer.modx@gmail.com) /
+                        Commiter: GitHub (developer.modx@gmail.com)
+                    </p>
+              <pre class="wrapped">Apply fixes from StyleCI (#1)</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2019-10-22T14:58:15+00:00 (commit #<span title="8c2346130b01c27c9a5cb79d5a6e3f2d7ea8ce6a">8c23461</span>)</h3>
+            <div>
+              <p>
+                        Author: Moiseev I (i.i.moiseev@efko.ru) /
+                        Commiter: Moiseev I (i.i.moiseev@efko.ru)
+                    </p>
+              <pre class="wrapped">Inital commit</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.8.2-dev - Copyright (C) 2010 - 2019 by Arne Blankerts</span>
+    </footer>
+  </body>
+</html>

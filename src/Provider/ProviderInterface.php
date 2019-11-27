@@ -21,5 +21,5 @@ interface ProviderInterface
      *
      * @return string
      */
-    public function getName();
+    public static function getName();
 }
